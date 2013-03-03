@@ -30,10 +30,12 @@
                 </div>
                 <div class="content">
                     <div class="c-left">
-                        <?= $content ?>
+                        <div class="c-left-inner">
+                            <?= $content?>
+                        </div>
                     </div>
-                    <div class="c-right">
-                        Rightside
+                    <div class="c-right" id="c-right">
+                        <?= $content_right ?>
                     </div>
                     <div class="clear"></div>
                 </div>

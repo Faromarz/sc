@@ -6,13 +6,6 @@ body {
     background-position-y: 0;
 }
 
-.body-wrapper {
-    background-image: url(/media/img/bg-top.png);
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-position-y: 0;
-}
-
 .container {
     
 }
@@ -26,6 +19,7 @@ body {
         height:140px;
         float:left;
         background-color:#FFF;
+        border-radius: 0 0 2px 2px;
     }
 
         .header .logo h1 {
@@ -74,6 +68,7 @@ body {
 
 .content {
     background-color: #FFF;
+    border-radius: 2px;
 }
 
 .content .c-left {
@@ -81,13 +76,42 @@ body {
     width: 465px;
 }
 
+    .content .c-left-inner {
+        padding:15px;
+    }
+
 .content .c-right {
-    background-color: #FAFAFA;
+    background-color: #EEE;
+    border-left: 1px solid #CCC;
     float:right;
     width: 465px;
+    border-radius: 0 2px 2px 0;
+}
+
+.front-img-wrapper {
+    padding-bottom:23px;
+    background-image: url(/media/img/front-image-flap.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    width:498px;
+}
+
+.front-img {
+    width:450px;
+    margin-left:20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color:#EEE;
+    border:14px solid #FFF;
+    box-shadow: 0 4px 20px rgba(0,0,0,.8);
 }
 
 /* Helper */
 .clear {
     clear:both;
+}
+
+h1 {
+    font-family: serif;
+    font-size: 24px;
 }

@@ -1,5 +1,7 @@
 <?php
 
+include_once('lock.php');
+
 /**
  * The directory in which your application specific resources are located.
  * The application directory must contain the bootstrap.php file.
