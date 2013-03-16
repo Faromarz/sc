@@ -40,7 +40,7 @@ Class Controller_Contact extends Controller_Main {
         }
         
         $this->content = View::factory('site/gastenboek');
-        $this->content->items = ORM::factory('guestbookitem')
+        $this->content->items = ORM::factory('Guestbookitem')
                                     ->where('accepted', '=', 1)
                                     ->order_by('timestamp', 'DESC')
                                     ->limit(250)

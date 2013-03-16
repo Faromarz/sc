@@ -32,7 +32,7 @@ Class Controller_Main extends Controller {
         $key    = $query['key'];
         
         if($key == App::generate_guestbook_key($id)){
-            $gbi = ORM::factory('guestbookitem', $id);
+            $gbi = ORM::factory('Guestbookitem', $id);
             if($gbi->loaded()){
                 $gbi->accepted = 1;
                 $gbi->save();
