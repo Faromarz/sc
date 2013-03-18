@@ -90,6 +90,10 @@ body {
     border-radius: 0 2px 2px 0;
 }
 
+.content .content-inner {
+    padding: 15px;
+}
+
 .front-img-wrapper {
     padding-bottom:23px;
     background-image: url(/media/img/front-image-flap.png);
@@ -171,6 +175,12 @@ p.intro {
 }
 
 .form-item input {
+    padding: 5px;
+    width: 200px;
+    border: 1px solid #CCC;
+}
+
+.form-item select {
     padding: 5px;
     width: 200px;
     border: 1px solid #CCC;

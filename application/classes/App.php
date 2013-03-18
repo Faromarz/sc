@@ -9,4 +9,15 @@ Class App {
         
     }
     
+    public static function get_content($name)
+    {
+        
+        $content = DB::select()->from('content')->where('name', '=', $name)->limit(1)->as_object()->execute();
+        if($content->count()){
+            return $content->current()->content;
+        } else {
+            return '';
+        }
+    }
+    
 }

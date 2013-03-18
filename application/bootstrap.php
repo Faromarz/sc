@@ -151,6 +151,19 @@ Route::set('contact', 'contact(/<action>)')
             'action'        => 'index'
         ));
 
+Route::set('admin', 'admin(/<action>(/<id>))')
+        ->defaults(array(
+            'controller'    => 'Admin',
+            'action'        => 'index',
+            'id'            => NULL
+        ));
+
+Route::set('dev', 'dev(/<action>)')
+        ->defaults(array(
+            'controller'    => 'Dev', 
+            'action'        => 'index'
+        ));
+
 Route::set('default', '(<action>(/<id>))')
 	->defaults(array(
 		'controller' => 'Main',

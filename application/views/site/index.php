@@ -1,2 +1,1 @@
-<h1>Welkom!</h1>
-<p>Lorem ipsum</p>
+<?= App::get_content('frontpage') ?>
