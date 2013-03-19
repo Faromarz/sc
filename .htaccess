@@ -1,3 +1,6 @@
+# No caching
+Header add "disablevcache" "true
+
 # Turn on URL rewriting
 RewriteEngine On
 
