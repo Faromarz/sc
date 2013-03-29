@@ -27,6 +27,7 @@
                         <ul>
                             <?php if($logged_in){ ?>
                             <li><a href="/admin">Bewerker</a></li>
+                            <li><a href="/admin/lezingen">Lezingen</a></li>
                             <li><a href="/admin/logout">Afmelden</a></li>
                             <?php } ?>
                         </ul>
@@ -35,6 +36,7 @@
                 </div>
                 <div class="content">
                     <div class="content-inner">
+                        <?php if(isset($_GET['success'])){ ?><div class='success'>De actie was succesvol.</div><?php }?>
                         <?= $content ?>
                     </div>
                 </div>

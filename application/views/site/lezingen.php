@@ -16,7 +16,7 @@
     <?= $item->info ?>
 </p>
 <p>
-    <a href="#" data-agendaitem="<?= $item->title ?>" class="agenda-signup">Aanmelden</a>
+    <a href="#" data-agendaitem="<?= $item->title ?>"  data-id="<?= $item->id ?>" class="agenda-signup">Aanmelden</a>
 </p>
 <hr/>
 <?php } ?>

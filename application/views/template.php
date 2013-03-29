@@ -56,7 +56,7 @@
             <h1>Aanmelden voor een agenda item</h1>
             <div class="form-item">
                 <label>Agendapunt</label>
-                <i id="agenda-signup-item">opendag-zwolle</i>
+                <i id="agenda-signup-item" data-id=''></i>
             </div>
             <div class="form-item">
                 <label>Naam</label>
@@ -68,7 +68,7 @@
             </div>
             <div class="form-item">
                 <label>Personen</label>
-                <input type="text" id="agenda-signup-name" placeholder="Personen" />
+                <input type="text" id="agenda-signup-persons" placeholder="Personen" />
             </div>
             <div class="form-item">
                 <label>Opmerkingen</label>

@@ -49,6 +49,51 @@ Class Controller_Admin extends Controller_Main {
         
     }
     
+    public function action_lezingen()
+    {
+        $success = false;
+        
+        $id                 = $this->request->param('id');
+        
+        if($id===NULL){
+            
+            $this->content = View::factory('admin/list_agendaitems');
+            $this->content->agendaitems = ORM::factory('agendaitem')->find_all();
+            
+        } else {
+            
+            if($id===0){
+                $agendaitem = ORM::factory('agendaitem');
+            } else {
+                $agendaitem = ORM::factory('agendaitem', $id);
+            }
+            
+            if(isset($_GET['delete'])){
+                ORM::factory('agendaitem', $id)->delete();
+                HTTP::redirect('admin/lezingen?success=1');
+                die();
+            } else {
+                
+                if(isset($_POST['title'])){
+                    
+                    $agendaitem->title = $_POST['title'];
+                    $agendaitem->date = $_POST['date'];
+                    $agendaitem->time = $_POST['time'];
+                    $agendaitem->info = $_POST['info'];
+                    
+                    $agendaitem->save();
+                    
+                    HTTP::redirect('admin/lezingen?success=1');
+                    
+                }
+                
+                $this->content = View::factory('admin/edit_agendaitem');
+                $this->content->item = $agendaitem->reload();
+            }
+        }
+        
+    }
+    
     public function action_login()
     {
         $error = false;

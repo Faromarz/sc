@@ -175,6 +175,12 @@ Route::set('admin', 'admin(/<action>(/<id>))')
             'id'            => NULL
         ));
 
+Route::set('ajax', 'ajax(/<action>)')
+        ->defaults(array(
+            'controller'    => 'Ajax',
+            'action'    => 'index'
+        ));
+
 Route::set('dev', 'dev(/<action>)')
         ->defaults(array(
             'controller'    => 'Dev', 

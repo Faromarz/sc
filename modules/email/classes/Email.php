@@ -68,7 +68,7 @@ class Email {
     
     public function setBody($body)
     {
-        $this->_message->setBody($body);
+        $this->_message->setBody($body, 'text/html');
         return $this;
     }
     
