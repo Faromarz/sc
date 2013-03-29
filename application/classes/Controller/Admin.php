@@ -58,18 +58,18 @@ Class Controller_Admin extends Controller_Main {
         if($id===NULL){
             
             $this->content = View::factory('admin/list_agendaitems');
-            $this->content->agendaitems = ORM::factory('agendaitem')->find_all();
+            $this->content->agendaitems = ORM::factory('Agendaitem')->find_all();
             
         } else {
             
             if($id===0){
-                $agendaitem = ORM::factory('agendaitem');
+                $agendaitem = ORM::factory('Agendaitem');
             } else {
-                $agendaitem = ORM::factory('agendaitem', $id);
+                $agendaitem = ORM::factory('Agendaitem', $id);
             }
             
             if(isset($_GET['delete'])){
-                ORM::factory('agendaitem', $id)->delete();
+                ORM::factory('Agendaitem', $id)->delete();
                 HTTP::redirect('admin/lezingen?success=1');
                 die();
             } else {

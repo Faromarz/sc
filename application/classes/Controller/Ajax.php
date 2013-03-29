@@ -19,7 +19,7 @@ Class Controller_Ajax extends Controller {
         
         $body       = View::factory('mail/agenda_signup');
         
-        $body->agendaitem = ORM::factory('agendaitem', $post['id']);
+        $body->agendaitem = ORM::factory('Agendaitem', $post['id']);
         $body->name    = $post['name'];
         $body->email    = $post['email'];
         $body->persons    = $post['persons'];

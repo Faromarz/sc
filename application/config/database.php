@@ -6,10 +6,10 @@ return array
 	(
 		'type'       => 'MySQL',
 		'connection' => array(
-			'hostname'   => 'localhost',
-			'database'   => 'soulcoaching',
-			'username'   => 'root',
-			'password'   => FALSE,
+			'hostname'   => 'soul-coaching.nl.mysql',
+			'database'   => 'soul_coaching_n',
+			'username'   => 'soul_coaching_n',
+			'password'   => 'Gf8haKik',
 			'persistent' => FALSE,
 		),
 		'table_prefix' => '',
