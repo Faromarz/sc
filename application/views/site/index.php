@@ -1,1 +1,0 @@
-<?= App::get_content('frontpage') ?>

@@ -10,6 +10,11 @@ Class Controller_Contact extends Controller_Main {
         $this->content_right = View::factory('site/contact_r');
     }
     
+    public function action_nieuwsbrief()
+    {
+        $this->content = View::factory('site/nieuwsbrief');
+    }
+    
     public function action_gastenboek()
     {
         

@@ -21,12 +21,6 @@ Class Controller_Main extends Controller {
         
     }
     
-    public function action_index()
-    {
-        $this->content = View::factory('site/index');
-        $this->content_right = View::factory('site/index_r');
-    }
-    
     public function action_acceptguestbookitem()
     {
         

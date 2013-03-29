@@ -145,6 +145,23 @@ Route::set('lezingen', 'lezingen(/<action>)')
             'action'        => 'index'
         ));
 
+Route::set('kosmische-intelligentie', 'kosmische-intelligentie')
+        ->defaults(array(
+            'controller'    => 'Hoehetwerkt',
+            'action'        => 'kosmischeintelligentie'
+        ));
+
+Route::set('waar-kun-je-aan-werken', 'waar-kun-je-aan-werken')
+        ->defaults(array(
+            'controller'    => 'Hoehetwerkt',
+            'action'        => 'waarkunjeaanwerken'
+        ));
+
+Route::set('licht-en-informatie', 'licht-en-informatie')
+        ->defaults(array(
+            'controller'    => 'Hoehetwerkt',
+            'action'        => 'lichteninformatie'
+        ));
 Route::set('contact', 'contact(/<action>)')
         ->defaults(array(
             'controller'    => 'Contact',
@@ -165,7 +182,7 @@ Route::set('dev', 'dev(/<action>)')
         ));
 
 Route::set('default', '(<action>(/<id>))')
-	->defaults(array(
-		'controller' => 'Main',
-		'action'     => 'index',
-	));
+        ->defaults(array(
+            'controller'    => 'Hoehetwerkt',
+            'action'        => 'essentie'
+        ));

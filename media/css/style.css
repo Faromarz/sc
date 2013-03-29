@@ -37,35 +37,59 @@ body {
         margin-left:40px;
     }
 
-        .header .menu ul {
+        .header .menu > ul {
             margin:0;
-            margin-top: 94px;
+            margin-top: 104px;
             list-style:none;
         }
 
-            .header .menu ul li {
+            .header .menu > ul li {
                 display: block;
                 float:left;
-                margin-right: 10px;
+                margin-right: 6px;
                 background-color:#FFF;
             }
             
-            .header .menu ul li:hover {
-                display: block;
-                float:left;
-                background-color:#FFF;
-                margin-top:2px;
-                margin-bottom:-2px;
+            .header .menu > ul li:hover>a {
+                color: #4d197d;
+                text-shadow: 0 2px 6px rgba(95,25,165,.3);
             }
             
-                .header .menu ul li a {
-                    padding:8px;
-                    height:30px;
+                .header .menu > ul li a {
+                    padding:6px;
+                    height:24px;
                     display: block;
                     text-decoration: none;
                     color: #000;
                     font-family: serif;
-                    font-size:18px;
+                    font-size:16px;
+                }
+                
+                
+                li.submenu ul {
+                    display: none;
+                    padding: 10px;
+                    margin-top: 0px;
+                    background-color:#FFF;
+                    border-radius: 0 5px 5px 5px;
+                    box-shadow: 0 10px 10px rgba(0,0,0,.3);
+                }
+                
+                li.submenu:hover ul {
+                    display: block;
+                    position: absolute;
+                    z-index: 100;
+                }
+                
+                li.submenu ul li {
+                    float: none !important;
+                }
+                
+                li.submenu>a {
+                    padding-left: 25px !important;
+                    background-repeat: no-repeat;
+                    background-image: url(/media/img/submenu.png);
+                    background-position: 5px 11px
                 }
 
 .content {

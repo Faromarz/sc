@@ -2,7 +2,7 @@
 <?php if(isset($_POST['gb_name'])){ ?>
 <script> $(function(){ alert('Dank voor de reactie. Uw bericht is geplaatst en zal spoedig zichtbaar worden! '); }); </script>
 <?php }?>
-<p class="intro">Geef in eigen bewoordingen weer hoe je de coaching of Re-Connective healing  consulten hebt ervaren, en wat dit voor je heeft betekend.</p>
+<?= App::get_content('gastenboek'); ?>
 <form method="POST">
     <div class="form-item">
         <label>Naam</label>

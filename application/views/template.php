@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title><?= $title ?></title>
-        <meta name="description" content="">
+        <meta name="description" content="<?= App::get_content('site_description') ?>">
         <meta name="viewport" content="width=device-width">
         
         <link rel="stylesheet" href="/media/css/blueprint.css"/>
@@ -23,7 +23,14 @@
                     </div>
                     <div class="menu">
                         <ul>
-                            <li><a href="/">Introductie</a></li>
+                            <li><a href="/">De Essentie</a></li>
+                            <li class="submenu"><a href="#">Hoe het werkt</a>
+                                <ul>
+                                    <li><a href="/kosmische-intelligentie">Kosmische Intelligentie</a></li>
+                                    <li><a href="/licht-en-informatie">Licht &amp; Informatie</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/waar-kun-je-aan-werken">Waar kun je aan werken</a></li>
                             <li><a href="/lezingen">Lezingen</a></li>
                             <li><a href="/contact">Contact</a></li>
                         </ul>

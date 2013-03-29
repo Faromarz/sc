@@ -11,6 +11,11 @@
 <?php } ?>
 
 <?php if($subject_selected) { ?>
+
+<?php if($subject_selected->info){ ?>
+<p class="intro"><?=$subject_selected->info ?></p>
+<?php }?>
+
 <form method="POST">
 <h2>Bewerk: <?= $subject_selected->description ?> <input type="submit" value="Opslaan" class="btn btn-primary" /></h2>
 
@@ -24,10 +29,16 @@
         CKEDITOR.replace( 'content', {
             language: 'nl',
             uiColor: '#cdacce',
-            width: 465
+            width: 465,
+            height: 450
         });
     })
     </script>
+    <?php
+                break;
+            case 'textarea':
+                ?>
+     <textarea name="content" style="width: 350px height: 200px;"><?= $subject_selected->content ?></textarea>
     <?php
                 break;
     } ?>
