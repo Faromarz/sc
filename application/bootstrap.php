@@ -162,6 +162,18 @@ Route::set('licht-en-informatie', 'licht-en-informatie')
             'controller'    => 'Hoehetwerkt',
             'action'        => 'lichteninformatie'
         ));
+
+Route::set('prijzen', 'prijzen')
+        ->defaults(array(
+            'controller'    => 'Contact',
+            'action'        => 'prijzen'
+        ));
+
+Route::set('reconnective-healing', 'reconnective-healing')
+        ->defaults(array(
+            'controller'    => 'Hoehetwerkt',
+            'action'        => 'reconnectivehealing'
+        ));
 Route::set('contact', 'contact(/<action>)')
         ->defaults(array(
             'controller'    => 'Contact',

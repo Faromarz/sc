@@ -28,10 +28,12 @@
                                 <ul>
                                     <li><a href="/kosmische-intelligentie">Kosmische Intelligentie</a></li>
                                     <li><a href="/licht-en-informatie">Licht &amp; Informatie</a></li>
+                                    <li><a href="/reconnective-healing">Reconnective Healing</a></li>
                                 </ul>
                             </li>
                             <li><a href="/waar-kun-je-aan-werken">Waar kun je aan werken</a></li>
                             <li><a href="/lezingen">Lezingen</a></li>
+                            <li><a href="/prijzen">Prijzen</a></li>
                             <li><a href="/contact">Contact</a></li>
                         </ul>
                     </div>

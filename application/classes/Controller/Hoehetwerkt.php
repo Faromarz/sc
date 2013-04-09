@@ -17,6 +17,12 @@ Class Controller_Hoehetwerkt extends Controller_Main {
         $this->content = View::factory('site/lichteninformatie');
     }
     
+    public function action_reconnectivehealing()
+    {
+        $this->title = 'Reconnective Healing - Soul-Coaching';
+        $this->content = View::factory('site/reconnectivehealing');
+    }
+    
     public function action_kosmischeintelligentie()
     {
         $this->title = 'Kosmische Intelligentie - Soul-Coaching';
