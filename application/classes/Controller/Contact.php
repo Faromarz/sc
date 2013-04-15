@@ -15,10 +15,10 @@ Class Controller_Contact extends Controller_Main {
         $this->content = View::factory('site/nieuwsbrief');
     }
     
-    public function action_prijzen()
+    public function action_tarieven()
     {
-        $this->title = 'Prijzen - Soul-Coaching';
-        $this->content = View::factory('site/prijzen');
+        $this->title = 'Tarieven - Soul-Coaching';
+        $this->content = View::factory('site/tarieven');
     }
     
     public function action_gastenboek()

@@ -1,4 +1,4 @@
-<h1>Lezingen / Workshops / Agenda</h1>
+<h1>Agenda</h1>
 <div>
     <?= App::get_content('lezingen') ?>
 </div>

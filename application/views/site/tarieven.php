@@ -1,2 +1,2 @@
-<h1>Prijzen</h1>
+<h1>Tarieven</h1>
 <?= App::get_content('prijzen'); ?>

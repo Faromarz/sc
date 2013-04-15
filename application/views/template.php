@@ -23,17 +23,22 @@
                     </div>
                     <div class="menu">
                         <ul>
-                            <li><a href="/">De Essentie</a></li>
-                            <li class="submenu"><a href="#">Hoe het werkt</a>
+                            <li><a href="/">Home</a></li>
+                            <li class="submenu"><a href="#">Informatie</a>
                                 <ul>
-                                    <li><a href="/kosmische-intelligentie">Kosmische Intelligentie</a></li>
                                     <li><a href="/licht-en-informatie">Licht &amp; Informatie</a></li>
-                                    <li><a href="/reconnective-healing">Reconnective Healing</a></li>
+                                    <li><a href="/de-essentie">De Essentie</a></li>
                                 </ul>
                             </li>
-                            <li><a href="/waar-kun-je-aan-werken">Waar kun je aan werken</a></li>
-                            <li><a href="/lezingen">Lezingen</a></li>
-                            <li><a href="/prijzen">Prijzen</a></li>
+                            <li class="submenu"><a href="#">Consulten</a>
+                                <ul>
+                                    <li><a href="/coaching">Coaching</a></li>
+                                    <li><a href="/reconnective-healing">Reconnective Healing</a></li>
+                                    <li><a href="/kosmische-intelligentie">Kosmische Intelligentie</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/agenda">Agenda</a></li>
+                            <li><a href="/tarieven">Tarieven</a></li>
                             <li><a href="/contact">Contact</a></li>
                         </ul>
                     </div>

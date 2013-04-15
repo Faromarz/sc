@@ -139,41 +139,42 @@ Kohana::modules(array(
  * Set the routes. Each route must have a minimum of a name, a URI and a set of
  * defaults for the URI.
  */
-Route::set('lezingen', 'lezingen(/<action>)')
+Route::set('agenda', 'agenda(/<action>)')
         ->defaults(array(
-            'controller'    => 'Lezingen',
+            'controller'    => 'Agenda',
             'action'        => 'index'
-        ));
-
-Route::set('kosmische-intelligentie', 'kosmische-intelligentie')
-        ->defaults(array(
-            'controller'    => 'Hoehetwerkt',
-            'action'        => 'kosmischeintelligentie'
-        ));
-
-Route::set('waar-kun-je-aan-werken', 'waar-kun-je-aan-werken')
-        ->defaults(array(
-            'controller'    => 'Hoehetwerkt',
-            'action'        => 'waarkunjeaanwerken'
         ));
 
 Route::set('licht-en-informatie', 'licht-en-informatie')
         ->defaults(array(
-            'controller'    => 'Hoehetwerkt',
+            'controller'    => 'Informatie',
             'action'        => 'lichteninformatie'
         ));
 
-Route::set('prijzen', 'prijzen')
+Route::set('de-essentie', 'de-essentie')
+        ->defaults(array(
+            'controller'    => 'Informatie',
+            'action'        => 'essentie'
+        ));
+
+Route::set('tarieven', 'tarieven')
         ->defaults(array(
             'controller'    => 'Contact',
-            'action'        => 'prijzen'
+            'action'        => 'tarieven'
         ));
 
 Route::set('reconnective-healing', 'reconnective-healing')
         ->defaults(array(
-            'controller'    => 'Hoehetwerkt',
+            'controller'    => 'Consulten',
             'action'        => 'reconnectivehealing'
         ));
+
+Route::set('kosmische-intelligentie', 'kosmische-intelligentie')
+        ->defaults(array(
+            'controller'    => 'Consulten',
+            'action'        => 'kosmischeintelligentie'
+        ));
+
 Route::set('contact', 'contact(/<action>)')
         ->defaults(array(
             'controller'    => 'Contact',
@@ -201,6 +202,6 @@ Route::set('dev', 'dev(/<action>)')
 
 Route::set('default', '(<action>(/<id>))')
         ->defaults(array(
-            'controller'    => 'Hoehetwerkt',
-            'action'        => 'essentie'
+            'controller'    => 'Informatie',
+            'action'        => 'home'
         ));
