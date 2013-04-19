@@ -22,6 +22,7 @@ Class Controller_Informatie extends Controller_Main {
     {
         $this->title = 'Licht en Informatie - Soul-Coaching';
         $this->content = View::factory('site/lichteninformatie');
+        $this->content_right = View::factory('site/lichteninformatie_r');
     }
     
 }

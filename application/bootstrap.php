@@ -163,6 +163,12 @@ Route::set('tarieven', 'tarieven')
             'action'        => 'tarieven'
         ));
 
+Route::set('coaching', 'coaching')
+        ->defaults(array(
+            'controller'    => 'Consulten',
+            'action'        => 'coaching'
+        ));
+
 Route::set('reconnective-healing', 'reconnective-healing')
         ->defaults(array(
             'controller'    => 'Consulten',
