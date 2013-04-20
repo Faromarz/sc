@@ -13,7 +13,7 @@
 <h2><?= $item->title ?></h2>
 <i><?= date('j-n-Y', $date->getTimestamp()) ?>, <?= $item->time ?></i>
 <p>
-    <?= $item->info ?>
+    <?= nl2br($item->info) ?>
 </p>
 <p>
     <a href="#" data-agendaitem="<?= $item->title ?>"  data-id="<?= $item->id ?>" class="agenda-signup">Aanmelden</a>
