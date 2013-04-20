@@ -8,6 +8,7 @@ Lezing Datum: <?= $agendaitem->date ?>, <?= $agendaitem->time ?>
 Naam: <?= $name ?><br/>
 Email: <?= $email ?><br/>
 Personen: <?= $persons ?><br/>
+Datum: <?= $date ?><br/>
 Opmerkingen: <?= $comments ?><br/>
 </p>
 

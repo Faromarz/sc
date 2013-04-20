@@ -24,7 +24,7 @@ Class Controller_Ajax extends Controller {
         $body->email    = $post['email'];
         $body->persons    = $post['persons'];
         $body->comments    = $post['comments'];
-        
+        $body->date    = $post['date'];
         $body       = $body->render();
         $to         = $this->config['admin_email'];
         

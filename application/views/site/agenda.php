@@ -11,7 +11,6 @@
     $date->setDate($y, $m, $d);
     ?>
 <h2><?= $item->title ?></h2>
-<i><?= date('j-n-Y', $date->getTimestamp()) ?>, <?= $item->time ?></i>
 <p>
     <?= nl2br($item->info) ?>
 </p>

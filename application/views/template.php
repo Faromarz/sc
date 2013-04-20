@@ -78,6 +78,10 @@
                 <input type="text" id="agenda-signup-persons" placeholder="Personen" />
             </div>
             <div class="form-item">
+                <label>Datum (bij meerdaagse evenementen)</label>
+                <input type="text" id="agenda-signup-date" placeholder="Datum" />
+            </div>
+            <div class="form-item">
                 <label>Opmerkingen</label>
                 <input type="text" id="agenda-signup-comments" placeholder="Opmerkingen" />
             </div>
