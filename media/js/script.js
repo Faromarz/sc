@@ -61,4 +61,28 @@ $(function(){
         }
     });
     
+    /**
+     * Nieuwsbrief
+     */
+    $('#newsletter-submit').click(function(e){
+        e.preventDefault();
+        if(!$('#nl_name').val().length || !$('#nl_email').val().length || !valid_email($('#nl_email').val())){
+            alert("Vul beide velden in alstublieft!")
+            return false;
+        } else {
+            $.post('/ajax/send_newsletter_mail', {
+                    'name': $('#nl_name').val(),
+                    'email': $('#nl_email').val()
+                },  function(){
+                    alert('Bedankt voor uw aanmelding! Er is een email verzonden naar de beheerder.')
+            });
+        }
+    });
+    
 })
+
+var valid_email = function(email)
+{
+    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+}

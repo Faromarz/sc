@@ -41,4 +41,30 @@ Class Controller_Ajax extends Controller {
         
     }
     
+    public function action_send_newsletter_mail()
+    {
+        
+        $post = $this->request->post();
+        
+        $body       = View::factory('mail/newsletter_signup');
+        
+        $body->name    = $post['name'];
+        $body->email    = $post['email'];
+        
+        $body       = $body->render();
+        $to         = $this->config['admin_email'];
+        
+        $email      = new Email();
+
+        $email
+                ->setBody($body)
+                ->setFromDefault()
+                ->setTo($this->config['admin_email'])
+                ->setSubject('Nieuwsbrief aanmelding Soul-Coaching')
+                ->send();
+        
+        $this->response->body(1);
+        
+    }
+    
 }
