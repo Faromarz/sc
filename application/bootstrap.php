@@ -72,7 +72,8 @@ I18n::lang('nl-nl');
 
 $development_addr = array(
     '::1',
-    '127.0.0.1'
+    '127.0.0.1',
+    '82.75.215.61'
 );
 
 Kohana::$environment = in_array($_SERVER['REMOTE_ADDR'], $development_addr) ? Kohana::DEVELOPMENT : Kohana::PRODUCTION;
@@ -101,7 +102,7 @@ Kohana::init(array(
 	'base_url'   => NULL,
         'index_file' => '',
         'caching'    => Kohana::$environment == Kohana::PRODUCTION,
-        'profile'    => Kohana::$environment == Kohana::DEVELOPMENT,
+        'profile'    => Kohana::$environment == Kohana::DEVELOPMENT
 ));
 
 /**

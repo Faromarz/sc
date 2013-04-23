@@ -9,6 +9,10 @@
             <input type="text" id="nl_name" placeholder="Naam" />
         </div>
         <div class="form-item">
+            <label>Plaats</label>
+            <input type="text" id="nl_city" placeholder="Plaats" />
+        </div>
+        <div class="form-item">
             <label>Email</label>
             <input type="text" id="nl_email" placeholder="E-mail" />
         </div>

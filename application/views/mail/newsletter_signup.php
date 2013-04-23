@@ -2,6 +2,7 @@
 
 <p>
 Naam: <?= $name ?><br/>
+Plaats: <?= $city ?><br/>
 Email: <?= $email ?><br/>
 </p>
 

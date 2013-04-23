@@ -50,6 +50,7 @@ Class Controller_Ajax extends Controller {
         
         $body->name    = $post['name'];
         $body->email    = $post['email'];
+        $body->city    = $post['city'];
         
         $body       = $body->render();
         $to         = $this->config['admin_email'];
