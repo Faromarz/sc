@@ -66,12 +66,40 @@
                 <i id="agenda-signup-item" data-id=''></i>
             </div>
             <div class="form-item">
-                <label>Naam</label>
-                <input type="text" id="agenda-signup-name" placeholder="Naam" />
+                <label>Voornaam</label>
+                <input type="text" id="agenda-signup-first-name" placeholder="Voornaam" />
+            </div>
+            <div class="form-item">
+                <label>Achternaam</label>
+                <input type="text" id="agenda-signup-last-name" placeholder="Achternaam" />
+            </div>
+            <div class="form-item">
+                <label>Adres</label>
+                <input type="text" id="agenda-signup-adres" placeholder="Adres" />
+            </div>
+            <div class="form-item">
+                <label>Postcode</label>
+                <input type="text" id="agenda-signup-postalcode" placeholder="Postcode" />
+            </div>
+            <div class="form-item">
+                <label>Woonplaats</label>
+                <input type="text" id="agenda-signup-city" placeholder="Woonplaats" />
+            </div>
+            <div class="form-item">
+                <label>Telefoon</label>
+                <input type="text" id="agenda-signup-phone" placeholder="Telefoon" />
             </div>
             <div class="form-item">
                 <label>Email</label>
                 <input type="text" id="agenda-signup-email" placeholder="E-mail" />
+            </div>
+            <div class="form-item">
+                <label>Leeftijd</label>
+                <input type="text" id="agenda-signup-age" placeholder="Leeftijd" />
+            </div>
+            <div class="form-item radio">
+                <label><input type="radio" name="gender" id="agenda-signup-gender-male" checked> Man</label>
+                <label><input type="radio" name="gender" id="agenda-signup-gender-female"> Vrouw</label>
             </div>
             <div class="form-item">
                 <label>Personen</label>

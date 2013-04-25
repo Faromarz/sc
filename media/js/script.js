@@ -15,10 +15,17 @@ $(function(){
     $('#agenda-signup-submit').click(function(e){
         e.preventDefault();
         
-        if($('#agenda-signup-name').val()){
+        if($('#agenda-signup-first-name').val() && $('#agenda-signup-last-name').val()){
             $.post('/ajax/send_agenda_mail', {
                     'id': $('#agenda-signup-item').attr('data-id'),
-                    'name': $('#agenda-signup-name').val(),
+                    'first_name': $('#agenda-signup-first-name').val(),
+                    'last_name': $('#agenda-signup-last-name').val(),
+                    'address': $('#agenda-signup-adres').val(),
+                    'postalcode': $('#agenda-signup-postalcode').val(),
+                    'city': $('#agenda-signup-city').val(),
+                    'phone': $('#agenda-signup-phone').val(),
+                    'age': $('#agenda-signup-age').val(),
+                    'gender': $('#agenda-signup-gender-male').attr('checked') ? 'm' : 'v',
                     'persons': $('#agenda-signup-persons').val(),
                     'comments': $('#agenda-signup-comments').val(),
                     'email': $('#agenda-signup-email').val(),

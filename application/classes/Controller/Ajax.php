@@ -20,7 +20,14 @@ Class Controller_Ajax extends Controller {
         $body       = View::factory('mail/agenda_signup');
         
         $body->agendaitem = ORM::factory('Agendaitem', $post['id']);
-        $body->name    = $post['name'];
+        $body->first_name    = $post['first_name'];
+        $body->last_name    = $post['last_name'];
+        $body->address      = $post['address'];
+        $body->postalcode = $post['postalcode'];
+        $body->city         = $post['city'];
+        $body->phone        = $post['phone'];
+        $body->age          = $post['age'];
+        $body->gender       = $post['gender'];
         $body->email    = $post['email'];
         $body->persons    = $post['persons'];
         $body->comments    = $post['comments'];
@@ -29,14 +36,12 @@ Class Controller_Ajax extends Controller {
         $to         = $this->config['admin_email'];
         
         $email      = new Email();
-
         $email
                 ->setBody($body)
                 ->setFromDefault()
                 ->setTo($this->config['admin_email'])
                 ->setSubject('Nieuwe aanmelding Soul-Coaching')
                 ->send();
-        
         $this->response->body(1);
         
     }
