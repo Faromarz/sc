@@ -63,7 +63,7 @@
             <h1>Aanmelden voor een agenda item</h1>
             <div class="form-item">
                 <label>Agendapunt</label>
-                <i id="agenda-signup-item" data-id=''></i>
+                <i style="display: block; float: left; margin: 8px 0;" id="agenda-signup-item" data-id=''></i>
             </div>
             <div class="form-item">
                 <label>Voornaam</label>
@@ -106,7 +106,7 @@
                 <input type="text" id="agenda-signup-persons" placeholder="Personen" />
             </div>
             <div class="form-item">
-                <label>Datum (bij meerdaagse evenementen)</label>
+                <label>Datum</label>
                 <input type="text" id="agenda-signup-date" placeholder="Datum" />
             </div>
             <div class="form-item">
