@@ -182,6 +182,12 @@ Route::set('kosmische-intelligentie', 'kosmische-intelligentie')
             'action'        => 'kosmischeintelligentie'
         ));
 
+Route::set('pad-van-zelfontwikkeling', 'pad-van-zelfontwikkeling')
+        ->defaults(array(
+            'controller'    => 'Informatie',
+            'action'        => 'padvanzelfontwikkeling'
+        ));
+
 Route::set('contact', 'contact(/<action>)')
         ->defaults(array(
             'controller'    => 'Contact',

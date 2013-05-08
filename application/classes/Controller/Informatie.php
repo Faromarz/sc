@@ -25,4 +25,10 @@ Class Controller_Informatie extends Controller_Main {
         $this->content_right = View::factory('site/lichteninformatie_r');
     }
     
+    public function action_padvanzelfontwikkeling()
+    {
+        $this->title = 'Pad van Zelfontwikkeling - Soul-Coaching';
+        $this->content = View::factory('site/padvanzelfontwikkeling');
+    }
+    
 }

@@ -28,6 +28,7 @@
                                 <ul>
                                     <li><a href="/licht-en-informatie">Licht &amp; Informatie</a></li>
                                     <li><a href="/de-essentie">De Essentie</a></li>
+                                    <li><a href="/pad-van-zelfontwikkeling">Pad van zelfontwikkeling</a></li>
                                 </ul>
                             </li>
                             <li class="submenu"><a href="#">Consulten</a>
