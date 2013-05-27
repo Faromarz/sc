@@ -57,7 +57,7 @@ Class Controller_Contact extends Controller_Main {
                                     ->limit(250)
                                     ->find_all();
         
-        $this->content_right = '';
+        $this->content_right = View::factory('site/gastenboek_r');
     }
     
 }
