@@ -29,26 +29,34 @@ Class Controller_Contact extends Controller_Main {
             
             $guestbookitem = ORM::factory('Guestbookitem');
             
-            $guestbookitem->ip = $_SERVER['REMOTE_ADDR'];
-            $guestbookitem->name = $post['gb_name'];
-            $guestbookitem->text = $post['gb_text'];
-            $guestbookitem->save();
+            $key = $post['gb_key'];
+            date_default_timezone_set("UTC");
+            date_default_timezone_set('Europe/Amsterdam');
             
-            $body       = View::factory('mail/acceptguestbookitem');
-            $body->gbi  = $guestbookitem;
-            $body       = $body->render();
-            $to         = $this->config['admin_email'];
-            
-            $email      = new Email();
-            
-            $email
-                    ->setBody($body)
-                    ->setFromDefault()
-                    ->setTo($this->config['admin_email'])
-                    ->setSubject('Nieuwe reactie Soul-Coaching')
-                    ->send();
+            if($key == sha1('scgb'.date('YnjG', time()))){
+                $guestbookitem->ip = $_SERVER['REMOTE_ADDR'];
+                $guestbookitem->name = $post['gb_name'];
+                $guestbookitem->text = $post['gb_text'];
+                $guestbookitem->save();
+
+                $body       = View::factory('mail/acceptguestbookitem');
+                $body->gbi  = $guestbookitem;
+                $body       = $body->render();
+                $to         = $this->config['admin_email'];
+
+                $email      = new Email();
+
+                $email
+                        ->setBody($body)
+                        ->setFromDefault()
+                        ->setTo($this->config['admin_email'])
+                        ->setSubject('Nieuwe reactie Soul-Coaching')
+                        ->send();
+            } 
             
         }
+            
+            
         
         $this->content = View::factory('site/gastenboek');
         $this->content->items = ORM::factory('Guestbookitem')

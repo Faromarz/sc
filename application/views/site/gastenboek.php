@@ -4,6 +4,7 @@
 <?php }?>
 <?= App::get_content('gastenboek'); ?>
 <form method="POST">
+    <input type="hidden" name="gb_key" value="<?= sha1('scgb'.date('YnjG', time())) ?>" />
     <div class="form-item">
         <label>Naam</label>
         <input type="text" id="gb_name" name="gb_name" placeholder="Naam" />
