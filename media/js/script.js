@@ -1,4 +1,24 @@
+var radio_open = false;
+var radio_el = null;
+
 $(function(){
+    
+    $('#listen_radio').click(function(e){
+        e.preventDefault();
+        if(!radio_open){
+            radio_open = true;
+            $('#overlay').css('display', 'block');
+            radio_el = $('<iframe class="radio_iframe" src="/radio.php"></iframe>');
+            $(document.body).append(radio_el); 
+        }
+        
+    });
+    
+    $('#overlay').click(function(e){
+        radio_open = false;
+        radio_el.remove();
+        $('#overlay').css('display', 'none');
+    });
     
     $('#c-right').css('min-height', $('#c-right').parent().height());
     

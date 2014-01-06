@@ -21,6 +21,7 @@
                     <div class="logo">
                         <h1>Soul-Coaching</h1>
                     </div>
+                    <a href="#" target="_blank" id="listen_radio">Soul-Coaching op Omroep Gelderland</a>
                     <div class="menu">
                         <ul>
                             <li><a href="/">Home</a></li>
@@ -119,6 +120,9 @@
                 <a href="#" class="btn" id="agenda-signup-cancel">Annuleren</a>
             </div>
         </div>
+        
+        <div id="overlay"></div>
+        
         <script type="text/javascript">
         
           var _gaq = _gaq || [];
@@ -133,5 +137,6 @@
           })();
         
         </script>
+        
     </body>
 </html>
