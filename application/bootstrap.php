@@ -73,7 +73,7 @@ I18n::lang('nl-nl');
 $development_addr = array(
     '::1',
     '127.0.0.1',
-    '82.75.215.61'
+    '82.75.66.170'
 );
 
 Kohana::$environment = in_array($_SERVER['REMOTE_ADDR'], $development_addr) ? Kohana::DEVELOPMENT : Kohana::PRODUCTION;
@@ -129,6 +129,7 @@ Kohana::modules(array(
 	// 'codebench'  => MODPATH.'codebench',  // Benchmarking tool
 	'database'   => MODPATH.'database',   // Database access
         'email'      => MODPATH.'email',
+        'captcha'    => MODPATH.'captcha',
 	// 'image'      => MODPATH.'image',      // Image manipulation
 	// 'minion'     => MODPATH.'minion',     // CLI Tasks
 	'orm'        => MODPATH.'orm',        // Object Relationship Mapping
@@ -140,6 +141,16 @@ Kohana::modules(array(
  * Set the routes. Each route must have a minimum of a name, a URI and a set of
  * defaults for the URI.
  */
+
+// Catch-all route for Captcha classes to run
+Route::set('captcha', 'captcha(/<group>)')
+	->defaults(array(
+            'controller' => 'Captcha',
+            'action' => 'index',
+            'group' => NULL
+        ));
+
+
 Route::set('agenda', 'agenda(/<action>)')
         ->defaults(array(
             'controller'    => 'Agenda',
@@ -194,11 +205,12 @@ Route::set('contact', 'contact(/<action>)')
             'action'        => 'index'
         ));
 
-Route::set('admin', 'admin(/<action>(/<id>))')
+Route::set('admin', 'admin(/<action>(/<id>(/<id2>)))')
         ->defaults(array(
             'controller'    => 'Admin',
             'action'        => 'index',
-            'id'            => NULL
+            'id'            => NULL,
+            'id2'           => NULL
         ));
 
 Route::set('ajax', 'ajax(/<action>)')

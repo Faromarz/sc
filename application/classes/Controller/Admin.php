@@ -94,6 +94,30 @@ Class Controller_Admin extends Controller_Main {
         
     }
     
+    public function action_guestbook()
+    {
+        
+        if($this->request->param('id') && $this->request->param('id2')){
+            $item  = ORM::factory('Guestbookitem', $this->request->param('id'));
+            if(!$item->loaded()){
+                throw new Kohana_Exception('Niet gevonden');
+            }
+            if($this->request->param('id2') == 'deny'){
+                $item->accepted = -1;
+            } elseif ($this->request->param('id2') == 'accept') {
+                $item->accepted = 1;
+            } else {
+                throw new Kohana_Exception('Que?');
+            }
+            
+            $item->save();
+            HTTP::redirect('admin/guestbook?success=1');
+        }
+        
+        $this->content = View::factory('admin/guestbook');
+        $this->content->items = ORM::factory('Guestbookitem')->where('accepted', '=', 0)->find_all();
+    }
+    
     public function action_login()
     {
         $error = false;

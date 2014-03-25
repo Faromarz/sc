@@ -21,27 +21,6 @@ Class Controller_Main extends Controller {
         
     }
     
-    public function action_acceptguestbookitem()
-    {
-        
-        $query  = $this->request->query();
-        
-        $id     = $query['id'];
-        $key    = $query['key'];
-        
-        if($key == App::generate_guestbook_key($id)){
-            $gbi = ORM::factory('Guestbookitem', $id);
-            if($gbi->loaded()){
-                $gbi->accepted = 1;
-                $gbi->save();
-                die('Bericht is geaccepteerd.');
-            }
-        } else {
-            die('Onjuiste key!');
-        }
-        
-    }
-    
     public function after(){
         
         $this->template->content    = $this->content;

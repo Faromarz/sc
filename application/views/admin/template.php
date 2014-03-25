@@ -28,6 +28,7 @@
                             <?php if($logged_in){ ?>
                             <li><a href="/admin">Bewerker</a></li>
                             <li><a href="/admin/lezingen">Lezingen</a></li>
+                            <li><a href="/admin/guestbook">Gastenboek</a></li>
                             <li><a href="/admin/logout">Afmelden</a></li>
                             <?php } ?>
                         </ul>

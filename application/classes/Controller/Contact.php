@@ -24,41 +24,31 @@ Class Controller_Contact extends Controller_Main {
     public function action_gastenboek()
     {
         
-        if($_POST){
-            $post = $this->request->post();
+        $captcha = Captcha::instance();
+        
+        $this->content = View::factory('site/gastenboek');
+        
+        if(isset($_POST['gb_text'])){
             
-            $guestbookitem = ORM::factory('Guestbookitem');
-            
-            $key = $post['gb_key'];
-            date_default_timezone_set("UTC");
-            date_default_timezone_set('Europe/Amsterdam');
-            
-            if($key == sha1('scgb'.date('YnjG', time()))){
+            if(!Captcha::valid($_POST['gb_captcha'])){
+                $this->content->captcha_error = 1;
+                $this->content->postdata = $_POST;
+            } else {
+                
+                $this->content->success = 1;
+                $post = $this->request->post();
+
+                $guestbookitem = ORM::factory('Guestbookitem');
+
                 $guestbookitem->ip = $_SERVER['REMOTE_ADDR'];
                 $guestbookitem->name = $post['gb_name'];
                 $guestbookitem->text = $post['gb_text'];
                 $guestbookitem->save();
-
-                $body       = View::factory('mail/acceptguestbookitem');
-                $body->gbi  = $guestbookitem;
-                $body       = $body->render();
-                $to         = $this->config['admin_email'];
-
-                $email      = new Email();
-
-                $email
-                        ->setBody($body)
-                        ->setFromDefault()
-                        ->setTo($this->config['admin_email'])
-                        ->setSubject('Nieuwe reactie Soul-Coaching')
-                        ->send();
-            } 
+            }
             
         }
-            
-            
         
-        $this->content = View::factory('site/gastenboek');
+        $this->content->captcha = $captcha;
         $this->content->items = ORM::factory('Guestbookitem')
                                     ->where('accepted', '=', 1)
                                     ->order_by('timestamp', 'DESC')
